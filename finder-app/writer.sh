@@ -8,6 +8,7 @@ then
 	echo "Provide 2 arguments"
 	exit 1
 else
+	mkdir -p "$(dirname "$file_path")"
 	if echo "$input" > "$file_path"
 	then
 		echo "successfully wrote to file"
